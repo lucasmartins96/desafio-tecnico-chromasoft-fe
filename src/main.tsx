@@ -3,11 +3,19 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
 import { BrowserRouter } from 'react-router';
+import { SnackbarProvider } from 'notistack';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <SnackbarProvider
+        anchorOrigin={{
+          horizontal: 'center',
+          vertical: 'top',
+        }}
+      >
+        <App />
+      </SnackbarProvider>
     </BrowserRouter>
   </StrictMode>
 );

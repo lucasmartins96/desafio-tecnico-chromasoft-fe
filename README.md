@@ -1,54 +1,79 @@
-# React + TypeScript + Vite
+# Desafio Técnico - Aplicativo de Gerenciamento de Tarefas (Front-End)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introdução
 
-Currently, two official plugins are available:
+Este repositório contém a minha solução para o desafio técnico de desenvolvimento Full Stack. O objetivo foi construir um aplicativo de gerenciamento de tarefas utilizando as tecnologias especificadas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+### Frontend:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React (com Vite)
+- Tailwind CSS
+- React Router
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Funcionalidades Implementadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Autenticação
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Cadastro de usuários
+- Signin, Login e logout
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Gerenciamento de Tarefas
+
+- Criar, editar e excluir tarefas
+- Listar todas as tarefas do usuário
+- Marcar tarefas como concluídas
+- Categorizar tarefas em colunas (pendentes/concluídas)
+
+## Como Executar o Projeto
+
+### Executando SEM Docker
+
+1. Clone o repositório e entre na pasta do backend:
+   ```sh
+   git clone https://github.com/lucasmartins96/desafio-tecnico-chromasoft-fe.git
+   ```
+2. Instale as dependências:
+   ```sh
+   npm install
+   ```
+3. Configure as variáveis de ambiente no arquivo `.env`.
+   ```
+   VITE_API_URL=http://localhost:3000
+   ```
+4. Inicie a aplicação:
+   ```sh
+   npm run dev
+   ```
+
+### Executando COM Docker
+
+1. Certifique-se de que o Docker e o Docker Compose estão instalados em sua máquina.
+2. Clone o repositório e entre na pasta do projeto:
+   ```sh
+   git clone https://github.com/lucasmartins96/desafio-tecnico-chromasoft-fe.git
+   ```
+3. Configure as variáveis de ambiente no arquivo `.env`.
+   ```
+     VITE_API_URL=http://localhost:3000
+   ```
+4. Execute o comando para subir os containers:
+   ```sh
+   docker-compose up --build
+   ```
+5. O frontend em `http://localhost:5173`.
+6. Para parar os containers, utilize:
+   ```sh
+   docker-compose down
+   ```
+
+## Melhorias Futuras
+
+- Implementação de testes automatizados.
+- Melhorias na acessibilidade da interface.
+- Implementação de Design Responsivo
+
+## Conclusão
+
+Este projeto foi desenvolvido como parte do desafio técnico para avaliar minhas habilidades em desenvolvimento Full Stack. Caso tenha alguma dúvida ou sugestão, fico à disposição!

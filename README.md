@@ -33,12 +33,13 @@ Este repositório contém a minha solução para o desafio técnico de desenvolv
 1. Clone o repositório e entre na pasta do backend:
    ```sh
    git clone https://github.com/lucasmartins96/desafio-tecnico-chromasoft-fe.git
+   cd desafio-tecnico-chromasoft-fe
    ```
 2. Instale as dependências:
    ```sh
    npm install
    ```
-3. Configure as variáveis de ambiente no arquivo `.env`.
+3. Configure as variáveis de ambiente (.env):
    ```
    VITE_API_URL=http://localhost:3000
    ```
@@ -53,6 +54,7 @@ Este repositório contém a minha solução para o desafio técnico de desenvolv
 2. Clone o repositório e entre na pasta do projeto:
    ```sh
    git clone https://github.com/lucasmartins96/desafio-tecnico-chromasoft-fe.git
+   cd desafio-tecnico-chromasoft-fe
    ```
 3. Configure as variáveis de ambiente no arquivo `.env`.
    ```
